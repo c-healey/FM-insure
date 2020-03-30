@@ -1,0 +1,52 @@
+.card {
+  &--container {
+    color: hsl(256, 26%, 20%);
+  }
+  & {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    margin-right: 2rem;
+  }
+  &--3 {
+    margin-right: 0;
+  }
+  .icon {
+    padding: 1rem 0;
+  }
+}
+.box {
+  position: relative;
+  padding: 4rem;
+
+  &::before {
+    content: " ";
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+  &--1 {
+    padding-right: 1rem;
+  }
+  &--2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+@include respond(sm-phone) {
+  .card {
+    text-align: center;
+  }
+
+  .box::before {
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  }
+}

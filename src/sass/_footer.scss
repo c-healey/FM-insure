@@ -1,0 +1,42 @@
+.footer {
+  text-transform: uppercase;
+  &-card,
+  &-menu {
+    flex-direction: column;
+    width: auto;
+    list-style-type: none;
+  }
+  li {
+    align-self: flex-start;
+  }
+  &-card-title {
+    color: var(--dark-grayish-violet);
+    margin: 2rem 0;
+  }
+}
+.social {
+  border-bottom: 1px solid var(--dark-grayish-violet);
+}
+.footer {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  &::before {
+    content: " ";
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+}
+@include respond(sm-phone) {
+  .footer::before {
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+  }
+}

@@ -1,0 +1,39 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem 0.75rem;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+    font-weight: 400;
+    width: 14rem;
+    // height: 4rem;
+
+    cursor: pointer;
+  }
+
+  &-bordered {
+    border: 2px solid var(--very-light-gray);
+
+    &--dark {
+      border: 2px solid var(--very-dark-violet);
+    }
+  }
+  &--wide {
+    width: 25%;
+  }
+
+  &-social-box--center {
+    align-self: center;
+  }
+}
+
+@include respond(sm-phone) {
+  .btn-nav-view-plan {
+    border: 2px solid var(--very-light-gray);
+  }
+}

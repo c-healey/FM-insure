@@ -57,7 +57,7 @@ nav li a {
   }
 }
 //mobile
-@include respond(sm-phone) {
+@include respond(phone) {
   .mobile--nav {
     width: 100%;
   }
